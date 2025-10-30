@@ -153,3 +153,183 @@ footer {
   background-color: #ffffff;
   text-align: center;
 }
+
+.auth-card {
+  background-color: #f6f8fa;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-toggle {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid #282c34;
+  background-color: transparent;
+  color: #282c34;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.auth-toggle button.active,
+.auth-toggle button:hover {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+}
+
+.auth-form label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.auth-form input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+  font-size: 16px;
+}
+
+.auth-form button {
+  margin-top: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.user-info span {
+  font-size: 14px;
+  color: #374151;
+}
+
+.status-message {
+  color: #2e7d32;
+  margin: 8px 0;
+}
+
+.status-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: #ecfdf5;
+  color: #047857;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fade-in-up 0.2s ease-out;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-message {
+  color: #c62828;
+  margin: 8px 0;
+}
+
+.memo-list p {
+  margin-top: 24px;
+  color: #6b7280;
+}
+
+.auth-separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.auth-separator::before,
+.auth-separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.google-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-button:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.google-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4285f4;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .auth-card {
+    margin: 0 auto;
+  }
+
+  .status-toast {
+    left: 50%;
+    right: unset;
+    transform: translateX(-50%);
+    top: 16px;
+  }
+
+  .user-info {
+    flex-direction: column;
+  }
+}
