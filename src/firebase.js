@@ -3,30 +3,14 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyDW2Zt3QRV9oDRavOgj-8QAwj3UbGaQlFg',
+  authDomain: 'memo-app-91ea0.firebaseapp.com',
+  projectId: 'memo-app-91ea0',
+  storageBucket: 'memo-app-91ea0.firebasestorage.app',
+  messagingSenderId: '871506190811',
+  appId: '1:871506190811:web:764c5cc422fbf484fbc7fe',
+  measurementId: 'G-5MW0FXK6F4',
 };
-
-const requiredKeys = [
-  'apiKey',
-  'authDomain',
-  'projectId',
-  'storageBucket',
-  'messagingSenderId',
-  'appId',
-];
-const missingKeys = requiredKeys.filter((key) => !firebaseConfig[key]);
-
-if (missingKeys.length > 0) {
-  throw new Error(
-    `Firebase の環境変数が不足しています。以下のキーを .env.local (.env) に設定してください: ${missingKeys.join(', ')}`,
-  );
-}
 
 const app = initializeApp(firebaseConfig);
 
