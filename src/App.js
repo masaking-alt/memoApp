@@ -341,8 +341,8 @@ function App() {
                   {profileLoading
                     ? 'ユーザー情報を読み込み中...'
                     : usernameForDisplay ||
-                      user.displayName ||
-                      user.email?.replace(USERNAME_EMAIL_SUFFIX, '')}
+                    user.displayName ||
+                    user.email?.replace(USERNAME_EMAIL_SUFFIX, '')}
                 </span>
                 <button type="button" onClick={handleSignOut}>
                   ログアウト
